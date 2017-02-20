@@ -1,4 +1,4 @@
-create database prak;
+CREATE DATABASE prak;
 USE prak;
 
 CREATE TABLE `Film` (
@@ -12,19 +12,20 @@ CREATE TABLE `Film` (
 	PRIMARY KEY (`film_id`)
 );
 
+-- type value: 0 for casette, 1 for cd
 CREATE TABLE `copy` (
 	`copy_id` int NOT NULL,
 	`film_id` int NOT NULL,
 	`type` bool NOT NULL,
 	PRIMARY KEY (`copy_id`)
 );
-
+ 
 CREATE TABLE `rent` (
+	`customer_id` int NOT NULL,
+	`copy_id` int NOT NULL,
 	`start_date` DATE NOT NULL,
 	`end_date` DATE,
-	`copy_id` int NOT NULL,
-	`customer_id` int NOT NULL,
-	`payed` int
+	`payed` int NOT NULL
 );
 
 CREATE TABLE `customer` (
@@ -32,7 +33,7 @@ CREATE TABLE `customer` (
 	`first name` varchar(20) NOT NULL,
 	`surname` varchar(20) NOT NULL,
 	`patronymic` varchar(20) NOT NULL,
-	`adress` varchar(30) NOT NULL,
+	`adress` varchar(50) NOT NULL,
 	`phone` DECIMAL(10) NOT NULL,
 	PRIMARY KEY (`customer_id`)
 );

@@ -14,4 +14,4 @@ DROP TABLE IF EXISTS `rent`;
 
 DROP TABLE IF EXISTS `customer`;
 
-drop database prak;
+DROP DATABASE prak;
