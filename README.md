@@ -39,3 +39,6 @@ Use cases:
 
 Схема бд:
 ![index](https://cloud.githubusercontent.com/assets/18196156/23093687/bf5d5e66-f603-11e6-8d12-3262148d7072.png)
+
+Схема сайта:
+![untitled diagram](https://cloud.githubusercontent.com/assets/18196156/23120288/201a88e2-f775-11e6-8222-45c0f41dc2e1.png)
