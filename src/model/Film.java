@@ -10,7 +10,7 @@ import javax.persistence.*;
 @Table(name = "film")
 public class Film {
 
-	@Id @GeneratedValue
+	@Id @GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name = "film_id")
 	private Integer id;
 	@Column(name = "name")

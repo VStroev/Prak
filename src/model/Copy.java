@@ -10,7 +10,7 @@ import javax.persistence.*;
 @Table(name = "copy")
 public class Copy {
 
-	@Id @GeneratedValue
+	@Id @GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name = "copy_id")
 	private Integer id;
 	@ManyToOne
