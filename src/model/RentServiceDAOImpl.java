@@ -260,8 +260,8 @@ public class RentServiceDAOImpl implements RentServiceDAO {
         Session session = sessions.openSession();
         session.beginTransaction();
         Query query = session.createQuery("select distinct customer from Customer customer,"
-                + "Rent rent, Copy copy where customer.id ="
-                + "rent.customer.id and rent.id = copy.rent.id"
+                + "Rent rent, Copy copy where customer.id = "
+                + "rent.customer.id and rent.copy.id = copy.id "
                 + "and copy.id = "
                 + copyId.toString());
         session.getTransaction().commit();

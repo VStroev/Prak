@@ -14,14 +14,14 @@ CREATE TABLE film (
 
 -- type value: 0 for casette, 1 for cd
 CREATE TABLE copy (
-	copy_id int NOT NULL ,
+	copy_id int NOT NULL AUTO_INCREMENT,
 	film_id int NOT NULL,
 	type bool NOT NULL,
 	PRIMARY KEY (copy_id)
 ) engine=InnoDB;
  
 CREATE TABLE rent (
-	rent_id int NOT NULL ,
+	rent_id int NOT NULL AUTO_INCREMENT,
 	customer_id int NOT NULL,
 	copy_id int NOT NULL,
 	start_date DATE NOT NULL,
@@ -31,7 +31,7 @@ CREATE TABLE rent (
 ) engine=InnoDB;
 
 CREATE TABLE customer (
-	customer_id int NOT NULL ,
+	customer_id int NOT NULL AUTO_INCREMENT,
 	first_name varchar(20),
 	surname varchar(20),
 	patronymic varchar(20),

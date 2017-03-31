@@ -4,9 +4,9 @@ import java.util.List;
 public class Main {
     public static void main(String [] args) {
         RentServiceDAOImpl obj = new RentServiceDAOImpl();
-        Film tmp = obj.loadFilm(0);
+        List<Rent> tmp = obj.getRentByCustomer(1);
         System.out.println("Look!");
-        System.out.println(tmp.getId() + tmp.getName() + tmp.getCompany());
+        System.out.println(tmp.get(0).getId());
         obj.end();
     }
 }
