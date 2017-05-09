@@ -1,9 +1,5 @@
 package model;
 
-
-
-
-
 import javax.persistence.*;
 
 @Entity
@@ -26,14 +22,14 @@ public class Copy {
 	public Film getFilm() {
 		return film;
 	}
-	public boolean isCd() {
+	public boolean getIsCd() {
 		return isCd;
 	}
 
 	public void setId(Integer id){
 		this.id = id;
 	}
-	public void setType(boolean type) {
+	public void setIsCd(boolean type) {
 		this.isCd = type;
 	}
 	public void setFilm(Film film) {

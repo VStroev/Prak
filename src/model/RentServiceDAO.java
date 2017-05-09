@@ -33,5 +33,6 @@ public interface RentServiceDAO {
     public List<Rent> getRentByCustomer(Integer customerId) throws HibernateException;
     public List<Customer> getCustomerByCopy(Integer copyId) throws HibernateException;
     public List<Customer> getUnpayedCustomerByFilm(Integer filmId) throws HibernateException;
+    public List<Customer> getUnpayedCustomerByCopy(Integer copyId) throws HibernateException;
 }
 

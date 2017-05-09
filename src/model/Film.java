@@ -36,7 +36,7 @@ public class Film {
 	public String getCompany() {
 		return company;
 	}
-	public String getProdusr() {
+	public String getProducer() {
 		return producer;
 	}
 	public Integer getCdCost() {

@@ -2,7 +2,7 @@ USE prak;
 
 INSERT `film` VALUE (1, 'Dogville', 'Isabella Films', STR_TO_DATE('1-01-2003', '%d-%m-%Y'), 'Lars von Trier', 300, 100);
 INSERT `film` VALUE (2, 'Paradise', 'DRIFE Productions', STR_TO_DATE('1-01-2016', '%d-%m-%Y'), 'Andrey Konchalovskiy', 250, 150);
-INSERT `film` VALUE (3, 'Inception', 'Warner Bros', STR_TO_DATE('1-01-2010', '%d-%m-%Y'), 'Christopher Nolan', 400, 200);
+INSERT `film` VALUE (3, 'Inception', 'Warner Brazzers', STR_TO_DATE('1-01-2010', '%d-%m-%Y'), 'Christopher Nolan', 400, 200);
 INSERT `film` VALUE (4, 'Todo sobre mi madre', 'El Deseo S.A.', STR_TO_DATE('1-01-1999', '%d-%m-%Y'), 'Pedro Almodóvar', 350, 200);
 INSERT `film` VALUE (5, 'Solaris', 'Mosfilm', STR_TO_DATE('1-01-1972', '%d-%m-%Y'), 'Andrey Tarkovskiy', 290, 100);
 

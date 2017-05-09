@@ -288,4 +288,21 @@ public class RentServiceDAOImpl implements RentServiceDAO {
         session.close();
         return list;
     }
+
+    @Override
+    public List<Customer> getUnpayedCustomerByCopy(Integer copyId) throws HibernateException {
+        Session session = sessions.openSession();
+        session.beginTransaction();
+        Query query = session.createQuery("select distinct customer from Customer customer,"
+                + "Rent rent, Copy copy where customer.id ="
+                + "rent.customer.id and rent.copy.id = copy.id "
+//                + "and rent.endDate = null "
+                + "and copy.id ="
+                + copyId.toString());
+        session.getTransaction().commit();
+        @SuppressWarnings("unchecked")
+        List<Customer> list = query.list();
+        session.close();
+        return list;
+    }
 }

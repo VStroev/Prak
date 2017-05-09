@@ -1,6 +1,5 @@
 package model;
 
-import org.hibernate.HibernateException;
 import org.testng.annotations.Test;
 import org.testng.annotations.DataProvider;
 import org.testng.Assert;
@@ -47,7 +46,7 @@ public class DAOTest {
         Assert.assertTrue(equals(tmp.getId(), f.getId()));
         Assert.assertTrue(equals(tmp.getName(), f.getName()));
         Assert.assertTrue(equals(tmp.getCompany(), f.getCompany()));
-        Assert.assertTrue(equals(tmp.getProdusr(), f.getProdusr()));
+        Assert.assertTrue(equals(tmp.getProducer(), f.getProducer()));
         Assert.assertTrue(equals(tmp.getCdCost(), f.getCdCost()));
         Assert.assertTrue(equals(tmp.getCasetteCost(), f.getCasetteCost()));
 
@@ -89,7 +88,7 @@ public class DAOTest {
 
         Copy c = new Copy();
         c.setFilm(rs.loadFilm(fId));
-        c.setType(isCd);
+        c.setIsCd(isCd);
 
         rs.addCopy(c);
         Assert.assertEquals (rs.getAllCopys().size(), size + 1);
