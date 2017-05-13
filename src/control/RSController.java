@@ -77,7 +77,7 @@ public class RSController {
         try {
             Copy c = dao.loadCopy(id);
             model.addAttribute("copy", c);
-            List<Customer> list = dao.getUnpayedCustomerByCopy(id);
+            List<Customer> list = dao.getCustomerByCopy(id);
             model.addAttribute("customers", list);
             model.addAttribute("len", list.size());
         } catch (Exception e) {
@@ -88,18 +88,6 @@ public class RSController {
         return "copy";
     }
 
-    @RequestMapping(value = "/copy_history", method = RequestMethod.GET)
-    public String getRents(@RequestParam(value="id", required=true) Integer id, Model model) {
-        try {
-            List<Rent> r= dao.getRentByCustomer(id);
-            model.addAttribute("copys", r);
-        } catch (Exception e) {
-            model.addAttribute("msg", e.getMessage());
-            return "error";
-        }
-
-        return "copys";
-    }
 
     @RequestMapping(value = "/history", method = RequestMethod.GET)
     public String getHistory(Model model) {
@@ -187,6 +175,10 @@ public class RSController {
     @RequestMapping(value = "/rent", method = RequestMethod.GET)
     public String rent(@RequestParam(value="id", required=true) Integer id, Model model) {
         try {
+            List<Customer> list = dao.getUnpayedCustomerByCopy(id);
+            if (list.size() != 0) {
+                throw new Exception("This copy is already used by " + list.get(0).getSurname() + list.get(0).getFirstName());
+            }
             Copy c = dao.loadCopy(id);
             Rent rent = new Rent();
             rent.setCopy(c);
@@ -202,10 +194,12 @@ public class RSController {
     }
 
     @RequestMapping(value = "/rent", method = RequestMethod.POST)
-    public String getCustomerAdd(@ModelAttribute("rent") Rent r, Model model) {
+    public String getCustomerAdd(@RequestParam(value="id", required=true) Integer id , @ModelAttribute("rent") Rent r, Model model) {
         try {
             Customer c = dao.loadCustomer(r.getCustomer().getId());
             r.setCustomer(c);
+            Copy copy = dao.loadCopy(id);
+            r.setCopy(copy);
             dao.addRent(r);
         } catch (Exception e) {
             model.addAttribute("msg", e.getMessage());

@@ -33,7 +33,7 @@
                     </c:if>
                 </td>
                 <td>
-                    <a href="error.form" class="btn btn-default" role="button">
+                    <a href="rent.form?id=${c.id}" class="btn btn-default" role="button">
                         <span class="glyphicon glyphicon-usd" aria-hidden="true"></span>
                     </a>
                 </td>

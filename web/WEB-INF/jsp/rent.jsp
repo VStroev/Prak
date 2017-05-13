@@ -12,7 +12,7 @@
     </c:forEach>
 </div>
 
-<form:form modelAttribute="rent" method="POST" action="rent.form">
+<form:form modelAttribute="rent" method="POST" action="rent.form?id=${rent.copy.id}">
     <div class="input-group">
         <span class="input-group-addon" id="basic-addon1">Покупатель (id)</span>
         <form:input path="customer.id"/>
@@ -22,16 +22,8 @@
         <form:input path="payed"/>
     </div>
     <div class="input-group">
-        <span class="input-group-addon" id="basic-addon1">Оплата</span>
-        <form:input path="payed"/>
-    </div>
-    <div class="input-group">
-        <span class="input-group-addon" id="basic-addon1">Оплата</span>
-        <form:input path="payed"/>
-    </div>
-    <div class="input-group">
         <span class="input-group-addon" id="basic-addon4">Дата</span>
-        <input type="text" path="date" class= "date" name = "date" value = "<fmt:formatDate value="${cForm.date}" pattern="MM-dd-yyyy" />"/>
+        <input type="text" path="startDate" class= "date" name = "startDate" value = "<fmt:formatDate value="${cForm.date}" pattern="MM-dd-yyyy" />"/>
     </div>
 
     <button type="submit" class="btn btn-default">Готово</button>
