@@ -38,7 +38,11 @@
             <td><c:out value="${r.startDate}" /></td>
             <td><c:out value="${r.endDate}" /></td>
             <td><c:out value="${r.payed}" /></td>
-
+            <td>
+                <a href="return.form?id=${r.id}" class="btn btn-default" role="button">
+                    <span class="glyphicon glyphicon-usd" aria-hidden="true"></span>
+                </a>
+            </td>
     </c:forEach>
 
     </tbody>

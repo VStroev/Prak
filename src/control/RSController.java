@@ -88,6 +88,22 @@ public class RSController {
         return "copy";
     }
 
+    @RequestMapping(value = "/return", method = RequestMethod.GET)
+    public String getReturn(@RequestParam(value="id", required=true) Integer id, Model model) {
+        try {
+            Rent r = dao.loadRent(id);
+            Date utilDate = new Date();
+            java.sql.Date sqlDate = new java.sql.Date(utilDate.getTime());
+            r.setEndDate(sqlDate);
+            dao.updateRent(r);
+            return "redirect:customer.form?id=" + r.getCustomer().getId();
+        } catch (Exception e) {
+            model.addAttribute("msg", e.getMessage());
+            return "error";
+        }
+
+
+    }
 
     @RequestMapping(value = "/history", method = RequestMethod.GET)
     public String getHistory(Model model) {

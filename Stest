@@ -1,0 +1,406 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="selenium.base" href="http://localhost:8080/" />
+<title>Stest</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">Stest</td></tr>
+</thead><tbody>
+<tr>
+	<td>open</td>
+	<td>/main/home.form</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Go</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//td[2]</td>
+	<td>300</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=td</td>
+	<td>Dogville</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>//a[contains(@href, 'film.form?id=1')]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//li[2]/h4</td>
+	<td>Режиссер</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//li[2]/p</td>
+	<td>Lars von Trier</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Home</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Go</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>//a[contains(@href, 'film_add.form')]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=name</td>
+	<td>Test</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=company</td>
+	<td>Test</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>name=date</td>
+	<td>1999-1-1</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=cdCost</td>
+	<td>1</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=casetteCost</td>
+	<td>1</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>css=button.btn.btn-default</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//tr[6]/td</td>
+	<td>Test</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//tr[6]/td[2]</td>
+	<td>1</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>//tr[6]/td[4]/a/span</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Удалить</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Home</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>xpath=(//a[contains(text(),'Go')])[2]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>css=span.glyphicon.glyphicon-info-sign</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=h1</td>
+	<td>Portnoy Alexander Mihailovich</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//li[2]/p</td>
+	<td>8800553535</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=td</td>
+	<td>Dogville</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//td[2]</td>
+	<td>2016-12-15</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Home</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>xpath=(//a[contains(text(),'Go')])[2]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>//a[contains(@href, 'customer_add.form')]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=surname</td>
+	<td>Test</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=firstName</td>
+	<td>Test</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=patronymic</td>
+	<td>Test</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=address</td>
+	<td>Test</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=phone</td>
+	<td>1</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>css=button.btn.btn-default</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//tr[6]/td</td>
+	<td>Test</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//tr[6]/td[3]</td>
+	<td>Test</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>//tr[6]/td[5]/a/span</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertNotText</td>
+	<td>//tr[6]/td</td>
+	<td>Test</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>//a[contains(@href, 'customer_add.form')]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=surname</td>
+	<td>Test</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=firstName</td>
+	<td>Test</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=patronymic</td>
+	<td>Test</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=address</td>
+	<td>Test</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=phone</td>
+	<td>11111111111</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>css=button.btn.btn-default</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=small</td>
+	<td>Что-то пошло не так... Мы пытаемся решить эту проблему (нет)</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Home</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Go</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>//a[contains(@href, 'copys.form?id=1')]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>//a[contains(@href, 'copy_add.form?id=1&amp;type=true')]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>//tr[3]/td</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>//tr[3]/td[3]/a/span</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=customer.id</td>
+	<td>1</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=payed</td>
+	<td>1</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>name=startDate</td>
+	<td>2017-10-10</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>css=button.btn.btn-default</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Home</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>xpath=(//a[contains(text(),'Go')])[2]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>css=span.glyphicon.glyphicon-info-sign</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//tr[3]/td</td>
+	<td>Dogville</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>//tr[3]/td[5]/a/span</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>//tr[3]/td[3]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Home</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Go</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>css=span.glyphicon.glyphicon-usd</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>xpath=(//a[contains(text(),'История')])[3]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=td</td>
+	<td>Portnoy</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Выдать</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=customer.id</td>
+	<td>1</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=payed</td>
+	<td>2</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>name=startDate</td>
+	<td>2017-11-11</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>css=button.btn.btn-default</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Home</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>xpath=(//a[contains(text(),'Go')])[2]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>css=span.glyphicon.glyphicon-info-sign</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//tr[4]/td[2]</td>
+	<td>2017-11-11</td>
+</tr>
+</tbody></table>
+</body>
+</html>
