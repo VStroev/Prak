@@ -105,18 +105,6 @@ public class RSController {
 
     }
 
-    @RequestMapping(value = "/history", method = RequestMethod.GET)
-    public String getHistory(Model model) {
-        try {
-            List<Rent> r = dao.getAllRents();
-            model.addAttribute("rents", r);
-        } catch (Exception e) {
-            model.addAttribute("msg", e.getMessage());
-            return "error";
-        }
-        return "history";
-    }
-
     @RequestMapping(value = "/film", method = RequestMethod.GET)
     public String getFilm(@RequestParam(value="id", required=true) Integer id, Model model) {
         try {
@@ -263,9 +251,6 @@ public class RSController {
 
 
     }
-
-
-
 
     @InitBinder
     public void initBinder(WebDataBinder binder) {
